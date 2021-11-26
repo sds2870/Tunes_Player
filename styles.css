@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&family=Zen+Dots&display=swap');
+
+:root {
+    --purpleKind: #453950;
+    --deepGrape: #241829;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: blueviolet;
+    font-family: 'Yusei Magic', sans-serif;
+}
+
+.music_player {
+    width: 350px;
+    height: 550px;
+    border-radius: 20px;
+    background: var(--purpleKind);
+    box-shadow: 0 40px 100px rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    overflow: hidden;
+    color: var(--deepGrape)
+}
+
+.song_name, .artist_name {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.song_name {
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.artist_name {
+    font-size: 20px;
+}
