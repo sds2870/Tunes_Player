@@ -12,7 +12,7 @@ songArtist.innerHTML = "artist";
 musicPlayer.append(songTitle, songArtist);
 
 let diskCover = document.createElement("div");
-diskCover.className = "disk"
+diskCover.className = "disk play"
 
 let songSeeker = document.createElement("div");
 songSeeker.className = "song_seeker"
@@ -35,11 +35,24 @@ musicPlayer.append(diskCover, songSeeker);
 let playerControls = document.createElement("div");
 playerControls.className = "controls";
 
+let flashBack = document.createElement("button");
+flashBack.className = "btn backward_btn";
+let backImage = document.createElement("img");
+backImage.src = "images/media-previous_button.png";
+flashBack.innerHTML = `${backImage}`
+
 let buttonSelect = document.createElement("button");
-buttonSelect.className = "play_btn";
+buttonSelect.className = "play_btn pause";
 let buttonSpanOne = document.createElement("span");
 let butonSpanTwo = document.createElement("span");
 buttonSelect.append(buttonSpanOne, butonSpanTwo);
-playerControls.append (buttonSelect);
+
+let flashForward = document.createElement("button");
+flashForward.className = "btn forward-btn";
+let forwardImage = document.createElement("img");
+forwardImage.src = "images/media_next_icon.png";
+flashForward.innerHTML = `${forwardImage}`
+
+playerControls.append(flashBack, buttonSelect, flashForward);
 
 musicPlayer.append(playerControls);
