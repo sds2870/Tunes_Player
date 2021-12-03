@@ -48,11 +48,15 @@ let butonSpanTwo = document.createElement("span");
 buttonSelect.append(buttonSpanOne, butonSpanTwo);
 
 let flashForward = document.createElement("button");
-flashForward.className = "btn forward-btn";
+flashForward.className = "btn forward_btn";
 let forwardImage = document.createElement("img");
-forwardImage.src = "images/media_next_icon.png";
+forwardImage.src = "images/next_button.png";
 flashForward.innerHTML = `${forwardImage}`
 
 playerControls.append(flashBack, buttonSelect, flashForward);
 
-musicPlayer.append(playerControls);
+let audioSource = document.createElement("audio");
+audioSource.src = "";
+audioSource.setAttribute("id", "audio");
+
+musicPlayer.append(playerControls, audioSource);
